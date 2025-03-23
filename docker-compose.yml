@@ -9,7 +9,7 @@ services:
       - /var/www/html/var
     working_dir: /var/www/html
     ports:
-      - "9000:9000"
+      - "9001:9000"
     depends_on:
       - mysql
 
@@ -17,14 +17,14 @@ services:
     image: mysql:latest
     container_name: ${APP_NAME}_mysql
     environment:
-      MYSQL_DATABASE: ${DB_DATABASE}
+      MYSQL_DATABASE: ${DB_NAME}
       MYSQL_USER: ${DB_USER}
-      MYSQL_PASSWORD: ${DB_PASSWORD}
-      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+      MYSQL_PASSWORD: ${DB_PASS}
+      MYSQL_ROOT_PASSWORD: 'root'
     volumes:
       - mysql_data:/var/lib/mysql
     ports:
-      - "3306:3306"
+      - "3307:3306"
 
 volumes:
   mysql_data:
