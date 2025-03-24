@@ -3,19 +3,25 @@
 namespace App\Entity;
 
 use App\Core\BaseEntity;
-use App\Attributes\Column;
 use App\Attributes\Table;
 
 #[Table(name: "car")]
 class Car extends BaseEntity {
-    #[Column(type: "VARCHAR", length: 100, nullable: false)]
-    private string $nom;
 
-    public function setNom(string $nom): void {
+    private ?int $id = null;
+
+    private ?string $nom = null;
+
+    public function setNom(?string $nom): void {
         $this->nom = $nom;
     }
-    public function getNom(): string {
+    public function getNom(): ?string {
         return $this->nom;
+    }
+
+    public function getId(): ?int
+    {
+        return $this->id;
     }
 
 }

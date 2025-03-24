@@ -1,6 +1,8 @@
 <?php
 
-require_once __DIR__ . '/../src/Entity/User.php';
+require_once __DIR__ . '/../src/autoload.php';
+
+use App\Entity\Car;
 
 $car = Car::getOneById(1);
 if (!$car) {
