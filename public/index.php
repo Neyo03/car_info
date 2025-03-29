@@ -14,11 +14,13 @@ if (!$car) {
 <head>
     <meta charset="UTF-8">
     <title>Informations de ma voiture</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-<h1>Voiture</h1>
-<ul>
-        <li><?= htmlspecialchars($car->getNom()) ?></li>
-</ul>
+    <body>
+    <div class="car-details">
+        <ul class="car-info">
+            <li><strong>Nom:</strong> <br> <span><?= $car->getNom() ?></span></li>
+        </ul>
+    </div>
 </body>
 </html>
