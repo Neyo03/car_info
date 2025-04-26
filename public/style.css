@@ -1,76 +1,60 @@
 * {
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
 }
 
-.car-details {
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    height: 100vh;
+}
+
+table {
     width: 100%;
-    padding: 20px;
+    font-size: 25px;
+    border-collapse: collapse;
     background: white;
-    text-align: center;
 }
 
-.car-details h1 {
-    font-size: 24px;
-    color: #007BFF;
-    margin-bottom: 10px;
+thead {
+    background-color: #000333;
+    color: white;
 }
 
-.car-info {
-    list-style: none;
-    color: #555555;
-    padding: 0;
+th, td {
+    padding: 15px 20px;
+    text-align: left;
 }
 
-.car-info li {
-    padding: 12px;
-    border-bottom: 1px solid #ddd;
-    font-size: 18px;
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
 }
 
-.car-info li:last-child {
-    border-bottom: none;
+tbody tr:hover {
+    background-color: #f1f1f1;
 }
 
-.car-info strong {
-    color: #333;
-    font-weight: bold;
-}
-
-.car-info span {
-    color: #555;
-}
-
-@media (max-width: 768px) {
-    .car-details {
-        max-width: 90%;
-        padding: 15px;
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #121212;
+        color: #e0e0e0;
     }
 
-    .car-details h1 {
-        font-size: 20px;
+    table {
+        background-color: #1e1e1e;
+        color: #e0e0e0;
     }
 
-    .car-info li {
-        font-size: 16px;
-        padding: 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    .car-details {
-        max-width: 95%;
-        padding: 10px;
+    thead {
+        background-color: #333366;
+        color: #ffffff;
     }
 
-    .car-details h1 {
-        font-size: 18px;
+    tbody tr:nth-child(even) {
+        background-color: #2a2a2a;
     }
 
-    .car-info li {
-        font-size: 14px;
-        padding: 8px;
+    tbody tr:hover {
+        background-color: #333333;
     }
 }

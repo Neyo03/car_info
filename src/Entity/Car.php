@@ -11,25 +11,11 @@ use App\Enum\ColumnType;
 class Car extends BaseEntity {
 
     #[Column(type: ColumnType::INT, nullable: false)]
-    private ?int $id = null;
+    public ?int $id = null;
 
     #[Column(type: ColumnType::VARCHAR, length: 254, nullable: false)]
-    private ?string $nom = null;
+    public ?string $nom = null;
 
     #[Column(type: ColumnType::VARCHAR, length: 255, nullable: false)]
-    private ?string $type = null;
-
-    public function getId(): ?int
-    {
-        return $this->id;
-    }
-
-    public function getNom(): ?string {
-        return $this->nom;
-    }
-
-    public function getType(): ?string
-    {
-        return $this->type;
-    }
+    public ?string $type = null;
 }
