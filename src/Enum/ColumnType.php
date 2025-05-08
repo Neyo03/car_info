@@ -9,4 +9,9 @@ enum ColumnType: string {
     case BOOLEAN = 'BOOLEAN';
     case DATETIME = 'DATETIME';
     case DECIMAL = 'DECIMAL';
+
+    public static function types(): array
+    {
+        return array_column(ColumnType::cases(), 'value');
+    }
 }
